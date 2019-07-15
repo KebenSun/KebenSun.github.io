@@ -3,7 +3,7 @@ title: Linux Mint 18 安装搜狗输入法
 date: 2018-04-28 15:39:21
 categories: 开发环境
 tags: 
-   -Linux 中文输入法
+- Linux 中文输入法
 description: 如何在linux mint 18系统上安装搜狗输入法
 ---
 最近在使用Linux Mint 18作为开发环境，正好搜狗输入法也支持linux系统，所以本文记录安装过程
