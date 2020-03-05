@@ -37,6 +37,8 @@
   {% endif %}
 </div>
 
+<div><a href="http://www.beian.miit.gov.cn/" target="_blank">鲁ICP备17018800号</a></br> </div>
+
 {% if theme.footer.powered.enable %}
   <div class="powered-by">{#
   #}{{ __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}{#
