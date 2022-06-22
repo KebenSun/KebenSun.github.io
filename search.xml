@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Linux Mint 18 安装搜狗输入法</title>
+    <url>/2018/04/28/Linux-Mint-18-%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/</url>
+    <content><![CDATA[<p>最近在使用Linux Mint 18作为开发环境，正好搜狗输入法也支持linux系统，所以本文记录安装过程<br>   因为Linux Mint 18 是基于Ubuntu 16，所以本文也适用于Ubuntu 16及以上系统</p>
+<h2 id="安装Fcitx输入法"><a href="#安装Fcitx输入法" class="headerlink" title="安装Fcitx输入法"></a>安装Fcitx输入法</h2><p>   <em>因为搜狗输入法是基于Fctix输入法，所以需要先安装Fctix</em></p>
+<ul>
+<li><p>打开System Settings<br>   <img src="/SystemSettings.png" alt="System Settings.png"></p>
+</li>
+<li><p>进入Input Method，点击Fctix后面的Add support for Fctix，安装完成后如下图所示<br>   <img src="/LanguageSettings.png" alt="Language Settings.png"></p>
+</li>
+</ul>
+<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><ul>
+<li><p>下载：<a href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法 for linux</a></p>
+</li>
+<li><p>打开进入安装界面，点击Install。安装完成后如下图所示：<br>   <img src="/Install.png" alt="Install"></p>
+</li>
+<li><p>安装完成后重启电脑</p>
+</li>
+</ul>
+<h2 id="选择搜狗输入法"><a href="#选择搜狗输入法" class="headerlink" title="选择搜狗输入法"></a>选择搜狗输入法</h2><ul>
+<li><p>打开Fctix configuration<br>   <img src="/Selection_002.png" alt="Selection_002.png"></p>
+</li>
+<li><p>点击下方添加按钮<br>   <img src="/Selection_003.png" alt="Selection_003.png"></p>
+</li>
+<li><p>找到搜狗拼音并添加到输入法，安装完成<br>   <img src="/Selection_004.png" alt="Selection_004.png"></p>
+</li>
+</ul>
+<h2 id="安装完成后可以使用默认的快捷键ctrl-space切换输入法。"><a href="#安装完成后可以使用默认的快捷键ctrl-space切换输入法。" class="headerlink" title="安装完成后可以使用默认的快捷键ctrl+space切换输入法。"></a>安装完成后可以使用默认的快捷键ctrl+space切换输入法。</h2><h2 id="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"><a href="#安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。" class="headerlink" title="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"></a>安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。</h2>]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>Linux 中文输入法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Excel中将时间戳转换为日期</title>
+    <url>/2018/07/19/Excel%E4%B8%AD%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%A5%E6%9C%9F/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">=TEXT((B2/1000+8*3600)/86400+70*365+19,&quot;yyyy-mm-dd hh:mm:ss&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ngrok实现内网穿透</title>
+    <url>/2019/05/20/Ngrok%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
+    <content><![CDATA[<h2 id="什么是ngrok"><a href="#什么是ngrok" class="headerlink" title="什么是ngrok"></a>什么是ngrok</h2><p>ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放。</p>
+<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p>内网穿透，即NAT穿透，网络连接时术语，计算机是局域网内时，外网与内网的计算机节点需要连接通信，有时就会出现不支持内网穿透。穿透后，你个人电脑指定的端口就会暴露在外网，可以通过域名来访问到你提供的服务。</p>
+<h2 id="典型用例"><a href="#典型用例" class="headerlink" title="典型用例"></a>典型用例</h2><p>微信开发。如果你没有拥有内网穿透的工具，你要在微信测试公众号上面调试功能，只能发布到测试环境，严重影响开发效率。</p>
+<h2 id="ngrok服务搭建"><a href="#ngrok服务搭建" class="headerlink" title="ngrok服务搭建"></a>ngrok服务搭建</h2><h3 id="准备资源"><a href="#准备资源" class="headerlink" title="准备资源"></a>准备资源</h3><ol>
+<li>服务器1台，如：阿里云CentOS 6.8 64位，假设IP是1.2.3.4。</li>
+<li>域名1个，已备案。如：ngrok.xxx.com，新增以下两个解析（本文在二级域名基础上做展示，即内网穿透要使用到三级域名，需要做泛解析）</li>
+<li>ngrok.xxx.com 映射到 1.2.3.4</li>
+<li>*.ngrok.xxx.com 映射到 1.2.3.4</li>
+<li>配置好后，可以ping一下随便一个三级域名，如：dev.ngrok.xxx.com，如果能ping通那就可以继续往下了。</li>
+</ol>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y install zlib-devel openssl-devel perl hg cpio expat-devel gettext-devel curl curl-devel perl-ExtUtils-MakeMaker hg wget gcc gcc-c++ git</span><br></pre></td></tr></table></figure>
+
+<h2 id="GO语言环境"><a href="#GO语言环境" class="headerlink" title="GO语言环境"></a>GO语言环境</h2><ol>
+<li>首先拿梯子去go官网下载对应的安装包 ，64位 OR 32位 | 当然其他地方也有的 : )。</li>
+<li>将文件上传到服务器</li>
+<li>执行以下命令</li>
+<li>解压：tar -C &#x2F;usr&#x2F;local -xzf go1.12.linux-amd64.tar.gz</li>
+<li>设置环境：vim &#x2F;etc&#x2F;profile<br> 新增一行 export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;go&#x2F;bin</li>
+<li>使环境生效：source &#x2F;etc&#x2F;profile</li>
+<li>验证：go version<br>输出[go version go1.12 linux&#x2F;amd64]就代表万事大吉了。</li>
+</ol>
+<h2 id="ngrok服务"><a href="#ngrok服务" class="headerlink" title="ngrok服务"></a>ngrok服务</h2><h3 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/inconshreveable/ngrok.git</span><br><span class="line">cd ngrok</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NGROK_DOMAIN=&quot;ngrok.xxx.com&quot;</span><br><span class="line"></span><br><span class="line">openssl genrsa -out base.key 2048</span><br><span class="line">openssl req -new -x509 -nodes -key base.key -days 10000 -subj &quot;/CN=$NGROK_DOMAIN&quot; -out base.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out server.crt</span><br><span class="line">~~~~</span><br><span class="line"></span><br><span class="line">### 替换证书</span><br></pre></td></tr></table></figure>
+<p>cp base.pem assets&#x2F;client&#x2F;tls&#x2F;ngrokroot.crt<br>cp server.crt assets&#x2F;server&#x2F;tls&#x2F;snakeoil.crt<br>cp dserver.key assets&#x2F;server&#x2F;tls&#x2F;snakeoil.key</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###编译</span><br></pre></td></tr></table></figure>
+<p>make release-server</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 运行</span><br></pre></td></tr></table></figure>
+<p>.&#x2F;bin&#x2F;ngrokd -tlsKey&#x3D;”assets&#x2F;server&#x2F;tls&#x2F;snakeoil.key” -tlsCrt&#x3D;”assets&#x2F;server&#x2F;tls&#x2F;snakeoil.crt” -domain&#x3D;”wechat.userwyh.com”  -httpAddr&#x3D;”:80” -httpsAddr&#x3D;”:443” -tunnelAddr&#x3D;”:4443”<br>#参数说明：<br>#-domain 生成证书时配置的NGROK_DOMAIN<br>#-httpAddr http协议端口，默认为80<br>#-httpsAddr https协议端口，默认为443<br>#-tunnelAddr 通道端口，默认4443</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 后台运行</span><br></pre></td></tr></table></figure>
+<p>setsid .&#x2F;bin&#x2F;ngrokd -tlsKey&#x3D;”assets&#x2F;server&#x2F;tls&#x2F;snakeoil.key” -tlsCrt&#x3D;”assets&#x2F;server&#x2F;tls&#x2F;snakeoil.crt” -domain&#x3D;”ngrok.xxx.com”  -httpAddr&#x3D;”:80” -httpsAddr&#x3D;”:443” -tunnelAddr&#x3D;”:4443”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 客户端</span><br><span class="line">客户端生成根据自己电脑的实际环境执行相应的命令。执行成功后在bin目录下会有一个windows_amd64，把它下载到自己的电脑上。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="GOOS-x3D-windows-GOARCH-x3D-amd64-make-release-client"><a href="#GOOS-x3D-windows-GOARCH-x3D-amd64-make-release-client" class="headerlink" title="GOOS&#x3D;windows GOARCH&#x3D;amd64 make release-client"></a>GOOS&#x3D;windows GOARCH&#x3D;amd64 make release-client</h2><p>#MAC 平台 32 位系统：GOOS&#x3D;darwin GOARCH&#x3D;386 make release-client<br>#MAC 平台 64 位系统：GOOS&#x3D;darwin GOARCH&#x3D;amd64 make release-client<br>#ARM 平台：GOOS&#x3D;linux GOARCH&#x3D;arm make release-client<br>#Linux 平台 32 位系统：GOOS&#x3D;linux GOARCH&#x3D;386 make release-client<br>#Linux 平台 64 位系统：GOOS&#x3D;linux GOARCH&#x3D;amd64 make release-client<br>#Windows 平台 32 位系统：GOOS&#x3D;windows GOARCH&#x3D;386 make release-client<br>#Windows 平台 64 位系统：GOOS&#x3D;windows GOARCH&#x3D;amd64 make release-client</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下载完成后，在ngrok.exe同级目录下创建一个简单的配置文件ngrok.cfg</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>server_addr: “ngrok.xxx.com:4443”<br>trust_host_root_certs: false</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注意：server_addr由在CentOS上面配置的NGROK_DOMAIN:tunnelAddr组成</span><br><span class="line">然后可以使用命令启动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>ngrok -config&#x3D;ngrok.cfg -log&#x3D;ngrok.log -subdomain&#x3D;dev 8080<br>#参数说明：<br>-config：你的配置文件，就上面创建那个<br>-log：日志文件地址<br>-subdomain：三级域名 本地服务端口号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">启动正常的话会控制台会输出如下内容，此时你就可以通过域名【http://dev.ngrok.xxx.com】来访问你的本地服务了。如果访问不了，可以看看自己域名映射配置正确了没有，看【准备资源】一节。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>ngrok                                                           (Ctrl+C to quit)</p>
+<p>Tunnel Status                 online<br>Version                       1.7&#x2F;1.7<br>Forwarding                    <a href="http://dev.ngrok.xxx.com/">http://dev.ngrok.xxx.com</a> -&gt; 127.0.0.1:8080<br>Forwarding                    <a href="https://dev.ngrok.xxx.com/">https://dev.ngrok.xxx.com</a> -&gt; 127.0.0.1:8080<br>Web Interface                 127.0.0.1:4040</p>
+<h1 id="Conn-0"><a href="#Conn-0" class="headerlink" title="Conn                        0"></a>Conn                        0</h1><p>Avg Conn Time                 0.00ms</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## nginx配置</span><br><span class="line">上面的配置已经实现了内网穿透，但是你会发现访问的时候要带个端口号，但是微信开发的时候只能使用80端口，就是说到这里，我们还是白忙活，还是不能在本地快乐的编码。我们一般也不能直接把80端口配置给了ngrok，因为80端口一般是nginx这个大佬占据的，所以我们只能在nginx上面做一下转发，如下：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>server {<br>       listen 80;<br>       server_name dev.ngrok.xxx.com;<br>       location &#x2F; {<br>           proxy_pass  <a href="http://dev.wechat.userwyh.com:8888/">http://dev.wechat.userwyh.com:8888/</a>;<br>           proxy_redirect off;<br>           client_max_body_size 10m;<br>           client_body_buffer_size 128k;<br>           proxy_connect_timeout 90;<br>           proxy_read_timeout 90;<br>           proxy_buffer_size 4k;<br>           proxy_buffers 6 128k;<br>           proxy_busy_buffers_size 256k;<br>           proxy_temp_file_write_size 256k;<br>       }<br>}</p>
+<p>~~~</p>
+<p>然后重启一下nginx，你就可以使用不带端口号的域名【<a href="http://dev.ngrok.xxx.com】进行访问了./">http://dev.ngrok.xxx.com】进行访问了。</a><br>如果你觉得可以使用80端口给ngrok，那么也是可以的，忽略本节。</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>Ngrok</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TODO-2019</title>
+    <url>/2019/01/14/TODO-2019/</url>
+    <content><![CDATA[<ul>
+<li><input disabled="" type="checkbox"> <del>每周一篇技术博客，杂记随意。</del> 失败</li>
+<li><input checked="" disabled="" type="checkbox"> 学习一种前端技术。</li>
+<li><input checked="" disabled="" type="checkbox"> 上半年完成博客改版。</li>
+<li><input disabled="" type="checkbox"> <del>减回125斤</del> 失败</li>
+<li><input disabled="" type="checkbox"> <del>学会如何沉淀知识</del> 失败</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工一键安装ss链接</title>
+    <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+</search>
