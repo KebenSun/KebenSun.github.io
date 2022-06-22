@@ -85,5 +85,5 @@ search:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:KebenSun/KebenSun.github.io.git
+  repo: https://github.com/KebenSun/KebenSun.github.io.git
   branch: master
