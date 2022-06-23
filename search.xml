@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Excel中将时间戳转换为日期</title>
+    <url>/2018/07/19/Excel%E4%B8%AD%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%A5%E6%9C%9F/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">=TEXT((B2/1000+8*3600)/86400+70*365+19,&quot;yyyy-mm-dd hh:mm:ss&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux Mint 18 安装搜狗输入法</title>
     <url>/2018/04/28/Linux-Mint-18-%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/</url>
     <content><![CDATA[<p>最近在使用Linux Mint 18作为开发环境，正好搜狗输入法也支持linux系统，所以本文记录安装过程<br>   因为Linux Mint 18 是基于Ubuntu 16，所以本文也适用于Ubuntu 16及以上系统</p>
@@ -33,17 +44,6 @@
       </categories>
       <tags>
         <tag>Linux 中文输入法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Excel中将时间戳转换为日期</title>
-    <url>/2018/07/19/Excel%E4%B8%AD%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%A5%E6%9C%9F/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">=TEXT((B2/1000+8*3600)/86400+70*365+19,&quot;yyyy-mm-dd hh:mm:ss&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-      <tags>
-        <tag>Excel</tag>
       </tags>
   </entry>
   <entry>
@@ -143,6 +143,34 @@
       </categories>
       <tags>
         <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D1|leetcode704|Binary Search</title>
+    <url>/2022/06/23/S1D1-leetcode704-Binary-Search/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/binary-search">leetcode 704. Binary Search</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>有序且不重复的数组，查找指定元素，与题目的名字一样，标准的二分查找法。<br>使用二分查找法时，需要着重注意边界问题，不然很容易一锅粥。<br>参考网上的解题思路，分为两种方式：</p>
+<ol>
+<li>左闭右开<br>循环条件：left &lt; right<br>  因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的<br>边界替换：if (nums[middle] &gt; target) right &#x3D; middle</li>
+<li>左闭右闭<br>循环条件：left &lt;&#x3D; right<br>  因为left &#x3D;&#x3D; right 在区间[left, right)是有意义的<br>边界替换：if (nums[middle] &gt; target) right &#x3D; middle - 1<br>  因为middle肯定不是target</li>
+</ol>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>暴力枚举版【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func search(nums []int, target int) int &#123;</span><br><span class="line">	for i, v := range nums &#123;</span><br><span class="line">		if v == target &#123;</span><br><span class="line">			return i</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二分查找-左闭右闭版【O(log n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func search(nums []int, target int) int &#123;</span><br><span class="line">	left := 0</span><br><span class="line">	right := len(nums) - 1</span><br><span class="line">	for left &lt;= right &#123;</span><br><span class="line">		mid := left + (right-left)/2</span><br><span class="line">		if nums[mid] &gt; target &#123;</span><br><span class="line">			right = mid - 1</span><br><span class="line">		&#125; else if nums[mid] &lt; target &#123;</span><br><span class="line">			left = mid + 1</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			return mid</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二分查找-左闭右开版【O(log n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func search(nums []int, target int) int &#123;</span><br><span class="line">    right := len(nums)</span><br><span class="line">    left := 0</span><br><span class="line">    for left &lt; right &#123;</span><br><span class="line">        mid := left + (right-left)/2</span><br><span class="line">        if nums[mid] == target &#123;</span><br><span class="line">            return mid</span><br><span class="line">        &#125; else if nums[mid] &gt; target &#123;</span><br><span class="line">            right = mid</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            left = mid+1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
 </search>
