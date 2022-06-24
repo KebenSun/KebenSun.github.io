@@ -20,23 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.kebensun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="科本小栈">
-<meta property="og:url" content="http://www.kebensun.com/categories/%E6%96%87%E6%A1%A3/index.html">
+    <meta name="description" content="每日一题第一赛季第二天">
+<meta property="og:type" content="article">
+<meta property="og:title" content="S1D2|leetcode27|Remove Element">
+<meta property="og:url" content="http://www.kebensun.com/2022/06/24/S1D2-leetcode27-Remove-Element/index.html">
 <meta property="og:site_name" content="科本小栈">
+<meta property="og:description" content="每日一题第一赛季第二天">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-24T01:46:09.000Z">
+<meta property="article:modified_time" content="2022-06-24T02:08:00.321Z">
 <meta property="article:author" content="keben Sun">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.kebensun.com/categories/%E6%96%87%E6%A1%A3/">
+<link rel="canonical" href="http://www.kebensun.com/2022/06/24/S1D2-leetcode27-Remove-Element/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/文档/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.kebensun.com/2022/06/24/S1D2-leetcode27-Remove-Element/","path":"2022/06/24/S1D2-leetcode27-Remove-Element/","title":"S1D2|leetcode27|Remove Element"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: 文档 | 科本小栈</title>
+<title>S1D2|leetcode27|Remove Element | 科本小栈</title>
   
 
 
@@ -98,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -111,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">解题代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,51 +179,113 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">文档
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.kebensun.com/2022/06/24/S1D2-leetcode27-Remove-Element/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="keben Sun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="科本小栈">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="S1D2|leetcode27|Remove Element | 科本小栈">
+      <meta itemprop="description" content="每日一题第一赛季第二天">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          S1D2|leetcode27|Remove Element
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2018</span>
+
+      <time title="创建时间：2022-06-24 09:46:09 / 修改时间：10:08:00" itemprop="dateCreated datePublished" datetime="2022-06-24T09:46:09+08:00">2022-06-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">每日一题第一赛季第二天</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-element">leetcode 27. Remove Element</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给定一个数组，移除指定内容的元素，剩余的元素要放在结果数组的前面。<br>因为数组的长度是固定的，所以暴力解法中，移除数组要循环一次，挪动后续元素的位置又要循环一次，很容易就做成了O(n^2)。<br>借鉴网上的解法，使用双指针方法。双指针同时从下标0出发，慢的指针负责存储结果，只有当不等于目标值的元素时，才会放置在慢指针下标处，这样也就避免了挪动元素的二次循环，快的指针负责遍历整个数组，确保所有元素都被校验过。<br>另外题目中提到，空间要求O(1)，也就是不能开辟新的数组，不过用双指针法，两个指针操作的是给定的数据，这个要求也满足。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>暴力解法【O(n^2)】</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func removeElement(nums []int, val int) int &#123;</span><br><span class="line">	k := 0</span><br><span class="line">	size := len(nums)</span><br><span class="line">	for i := 0; i &lt; size; i++ &#123;</span><br><span class="line">		if nums[i] == val &#123;</span><br><span class="line">			k++</span><br><span class="line">			for j := i + 1; j &lt; size; j++ &#123;</span><br><span class="line">				nums[j-1] = nums[j]</span><br><span class="line">			&#125;</span><br><span class="line">			i--</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return len(nums) - k</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双指针法【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func removeElement(nums []int, val int) int &#123;</span><br><span class="line">	res := 0</span><br><span class="line">	for i := 0; i &lt; len(nums); i++ &#123;</span><br><span class="line">		if nums[i] != val &#123;</span><br><span class="line">			nums[res] = nums[i]</span><br><span class="line">			res++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2018-07-19T11:52:45+08:00"
-              content="2018-07-19">
-          07-19
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/07/19/Excel%E4%B8%AD%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%A5%E6%9C%9F/" itemprop="url">
-            <span itemprop="name">Excel中将时间戳转换为日期</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/23/S1D1-leetcode704-Binary-Search/" rel="prev" title="S1D1|leetcode704|Binary Search">
+                  <i class="fa fa-chevron-left"></i> S1D1|leetcode704|Binary Search
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -257,7 +326,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"d44062b490b12d412c90609a3893820b"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"3a1415cc0909698be580f7fcefd4bab4"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

@@ -103,49 +103,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TODO-2019</title>
-    <url>/2019/01/14/TODO-2019/</url>
-    <content><![CDATA[<ul>
-<li><input disabled="" type="checkbox"> <del>每周一篇技术博客，杂记随意。</del> 失败</li>
-<li><input checked="" disabled="" type="checkbox"> 学习一种前端技术。</li>
-<li><input checked="" disabled="" type="checkbox"> 上半年完成博客改版。</li>
-<li><input disabled="" type="checkbox"> <del>减回125斤</del> 失败</li>
-<li><input disabled="" type="checkbox"> <del>学会如何沉淀知识</del> 失败</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【macOS M1】Java环境安装</title>
-    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搬瓦工一键安装ss链接</title>
-    <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>S1D1|leetcode704|Binary Search</title>
     <url>/2022/06/23/S1D1-leetcode704-Binary-Search/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/binary-search">leetcode 704. Binary Search</a></p>
@@ -171,6 +128,70 @@
       <tags>
         <tag>leetcode</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D2|leetcode27|Remove Element</title>
+    <url>/2022/06/24/S1D2-leetcode27-Remove-Element/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-element">leetcode 27. Remove Element</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给定一个数组，移除指定内容的元素，剩余的元素要放在结果数组的前面。<br>因为数组的长度是固定的，所以暴力解法中，移除数组要循环一次，挪动后续元素的位置又要循环一次，很容易就做成了O(n^2)。<br>借鉴网上的解法，使用双指针方法。双指针同时从下标0出发，慢的指针负责存储结果，只有当不等于目标值的元素时，才会放置在慢指针下标处，这样也就避免了挪动元素的二次循环，快的指针负责遍历整个数组，确保所有元素都被校验过。<br>另外题目中提到，空间要求O(1)，也就是不能开辟新的数组，不过用双指针法，两个指针操作的是给定的数据，这个要求也满足。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>暴力解法【O(n^2)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func removeElement(nums []int, val int) int &#123;</span><br><span class="line">	k := 0</span><br><span class="line">	size := len(nums)</span><br><span class="line">	for i := 0; i &lt; size; i++ &#123;</span><br><span class="line">		if nums[i] == val &#123;</span><br><span class="line">			k++</span><br><span class="line">			for j := i + 1; j &lt; size; j++ &#123;</span><br><span class="line">				nums[j-1] = nums[j]</span><br><span class="line">			&#125;</span><br><span class="line">			i--</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return len(nums) - k</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双指针法【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func removeElement(nums []int, val int) int &#123;</span><br><span class="line">	res := 0</span><br><span class="line">	for i := 0; i &lt; len(nums); i++ &#123;</span><br><span class="line">		if nums[i] != val &#123;</span><br><span class="line">			nums[res] = nums[i]</span><br><span class="line">			res++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TODO-2019</title>
+    <url>/2019/01/14/TODO-2019/</url>
+    <content><![CDATA[<ul>
+<li><input disabled="" type="checkbox"> <del>每周一篇技术博客，杂记随意。</del> 失败</li>
+<li><input checked="" disabled="" type="checkbox"> 学习一种前端技术。</li>
+<li><input checked="" disabled="" type="checkbox"> 上半年完成博客改版。</li>
+<li><input disabled="" type="checkbox"> <del>减回125斤</del> 失败</li>
+<li><input disabled="" type="checkbox"> <del>学会如何沉淀知识</del> 失败</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工一键安装ss链接</title>
+    <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
       </tags>
   </entry>
 </search>
