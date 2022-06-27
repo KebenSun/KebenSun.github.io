@@ -131,6 +131,23 @@
       </tags>
   </entry>
   <entry>
+    <title>S1D3|leetcode977|Squares of a Sorted Array</title>
+    <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>S1D2|leetcode27|Remove Element</title>
     <url>/2022/06/24/S1D2-leetcode27-Remove-Element/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-element">leetcode 27. Remove Element</a></p>
@@ -149,6 +166,19 @@
       <tags>
         <tag>leetcode</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
       </tags>
   </entry>
   <entry>
@@ -179,19 +209,6 @@
       </categories>
       <tags>
         <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【macOS M1】Java环境安装</title>
-    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
       </tags>
   </entry>
 </search>

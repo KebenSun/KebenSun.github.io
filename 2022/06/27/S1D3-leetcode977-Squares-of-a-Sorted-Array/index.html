@@ -20,28 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.kebensun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="搬瓦工一键安装ss链接地址">
+    <meta name="description" content="每日一题第一赛季第三天">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搬瓦工一键安装ss链接">
-<meta property="og:url" content="http://www.kebensun.com/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/index.html">
+<meta property="og:title" content="S1D3|leetcode977|Squares of a Sorted Array">
+<meta property="og:url" content="http://www.kebensun.com/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/index.html">
 <meta property="og:site_name" content="科本小栈">
-<meta property="og:description" content="搬瓦工一键安装ss链接地址">
+<meta property="og:description" content="每日一题第一赛季第三天">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-07-05T06:21:59.000Z">
-<meta property="article:modified_time" content="2022-06-24T05:40:15.921Z">
+<meta property="article:published_time" content="2022-06-27T07:21:33.000Z">
+<meta property="article:modified_time" content="2022-06-27T08:34:33.795Z">
 <meta property="article:author" content="keben Sun">
-<meta property="article:tag" content="SSR">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.kebensun.com/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/">
+<link rel="canonical" href="http://www.kebensun.com/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.kebensun.com/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/","path":"2018/07/05/搬瓦工一键安装ss链接/","title":"搬瓦工一键安装ss链接"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.kebensun.com/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/","path":"2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/","title":"S1D3|leetcode977|Squares of a Sorted Array"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>搬瓦工一键安装ss链接 | 科本小栈</title>
+<title>S1D3|leetcode977|Squares of a Sorted Array | 科本小栈</title>
   
 
 
@@ -103,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">解题代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,7 +190,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.kebensun.com/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/">
+    <link itemprop="mainEntityOfPage" href="http://www.kebensun.com/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -201,12 +203,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="搬瓦工一键安装ss链接 | 科本小栈">
-      <meta itemprop="description" content="搬瓦工一键安装ss链接地址">
+      <meta itemprop="name" content="S1D3|leetcode977|Squares of a Sorted Array | 科本小栈">
+      <meta itemprop="description" content="每日一题第一赛季第三天">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          搬瓦工一键安装ss链接
+          S1D3|leetcode977|Squares of a Sorted Array
         </h1>
 
         <div class="post-meta-container">
@@ -216,15 +218,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2018-07-05 14:21:59" itemprop="dateCreated datePublished" datetime="2018-07-05T14:21:59+08:00">2018-07-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-24 13:40:15" itemprop="dateModified" datetime="2022-06-24T13:40:15+08:00">2022-06-24</time>
+      <time title="创建时间：2022-06-27 15:21:33 / 修改时间：16:34:33" itemprop="dateCreated datePublished" datetime="2022-06-27T15:21:33+08:00">2022-06-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,14 +228,14 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">开发环境</span></a>
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">搬瓦工一键安装ss链接地址</div>
+            <div class="post-description">每日一题第一赛季第三天</div>
         </div>
       </header>
 
@@ -247,7 +243,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a target="_blank" rel="noopener" href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
+        <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
     </div>
 
@@ -257,21 +257,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/SSR/" rel="tag"># SSR</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2018/04/28/Linux-Mint-18-%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/" rel="prev" title="Linux Mint 18 安装搜狗输入法">
-                  <i class="fa fa-chevron-left"></i> Linux Mint 18 安装搜狗输入法
+                <a href="/2022/06/24/S1D2-leetcode27-Remove-Element/" rel="prev" title="S1D2|leetcode27|Remove Element">
+                  <i class="fa fa-chevron-left"></i> S1D2|leetcode27|Remove Element
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/07/19/Excel%E4%B8%AD%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%A5%E6%9C%9F/" rel="next" title="Excel中将时间戳转换为日期">
-                  Excel中将时间戳转换为日期 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -324,7 +322,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"2ea65a77bb196c1c7185f2c3c1f5e5a0"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"fe00869a4e38ea67e8506ae53c58a3f3"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
