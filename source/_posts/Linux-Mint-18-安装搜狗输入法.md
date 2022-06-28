@@ -14,29 +14,29 @@ description: 如何在linux mint 18系统上安装搜狗输入法
    *因为搜狗输入法是基于Fctix输入法，所以需要先安装Fctix*
 
    * 打开System Settings
-   ![System Settings.png](SystemSettings.png)
+   {% asset_img SystemSettings.png System Settings %}
 
    * 进入Input Method，点击Fctix后面的Add support for Fctix，安装完成后如下图所示
-   ![Language Settings.png](LanguageSettings.png)
+   {% asset_img LanguageSettings.png Language Settings %}
 
 ## 安装搜狗输入法
    * 下载：[搜狗输入法 for linux](https://pinyin.sogou.com/linux/?r=pinyin)
 
    * 打开进入安装界面，点击Install。安装完成后如下图所示：
-   ![Install](Install.png)
+   {% asset_img Install.png Install %}
 
    * 安装完成后重启电脑
 
 ## 选择搜狗输入法
 
    * 打开Fctix configuration
-   ![Selection_002.png](Selection_002.png)
+   {% asset_img Selection_002.png Selection_002 %}
 
    * 点击下方添加按钮
-   ![Selection_003.png](Selection_003.png)
+   {% asset_img Selection_003.png Selection_003 %}
 
    * 找到搜狗拼音并添加到输入法，安装完成
-   ![Selection_004.png](Selection_004.png)
+   {% asset_img Selection_004.png Selection_004 %}
 
 
 ## 安装完成后可以使用默认的快捷键ctrl+space切换输入法。
