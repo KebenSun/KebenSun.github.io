@@ -12,41 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux Mint 18 安装搜狗输入法</title>
-    <url>/2018/04/28/Linux-Mint-18-%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/</url>
-    <content><![CDATA[<p>最近在使用Linux Mint 18作为开发环境，正好搜狗输入法也支持linux系统，所以本文记录安装过程<br>   因为Linux Mint 18 是基于Ubuntu 16，所以本文也适用于Ubuntu 16及以上系统</p>
-<h2 id="安装Fcitx输入法"><a href="#安装Fcitx输入法" class="headerlink" title="安装Fcitx输入法"></a>安装Fcitx输入法</h2><p>   <em>因为搜狗输入法是基于Fctix输入法，所以需要先安装Fctix</em></p>
-<ul>
-<li><p>打开System Settings<br>   <img src="/SystemSettings.png" alt="System Settings.png"></p>
-</li>
-<li><p>进入Input Method，点击Fctix后面的Add support for Fctix，安装完成后如下图所示<br>   <img src="/LanguageSettings.png" alt="Language Settings.png"></p>
-</li>
-</ul>
-<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><ul>
-<li><p>下载：<a href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法 for linux</a></p>
-</li>
-<li><p>打开进入安装界面，点击Install。安装完成后如下图所示：<br>   <img src="/Install.png" alt="Install"></p>
-</li>
-<li><p>安装完成后重启电脑</p>
-</li>
-</ul>
-<h2 id="选择搜狗输入法"><a href="#选择搜狗输入法" class="headerlink" title="选择搜狗输入法"></a>选择搜狗输入法</h2><ul>
-<li><p>打开Fctix configuration<br>   <img src="/Selection_002.png" alt="Selection_002.png"></p>
-</li>
-<li><p>点击下方添加按钮<br>   <img src="/Selection_003.png" alt="Selection_003.png"></p>
-</li>
-<li><p>找到搜狗拼音并添加到输入法，安装完成<br>   <img src="/Selection_004.png" alt="Selection_004.png"></p>
-</li>
-</ul>
-<h2 id="安装完成后可以使用默认的快捷键ctrl-space切换输入法。"><a href="#安装完成后可以使用默认的快捷键ctrl-space切换输入法。" class="headerlink" title="安装完成后可以使用默认的快捷键ctrl+space切换输入法。"></a>安装完成后可以使用默认的快捷键ctrl+space切换输入法。</h2><h2 id="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"><a href="#安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。" class="headerlink" title="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"></a>安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。</h2>]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>Linux 中文输入法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ngrok实现内网穿透</title>
     <url>/2019/05/20/Ngrok%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
     <content><![CDATA[<h2 id="什么是ngrok"><a href="#什么是ngrok" class="headerlink" title="什么是ngrok"></a>什么是ngrok</h2><p>ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放。</p>
@@ -103,6 +68,41 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux Mint 18 安装搜狗输入法</title>
+    <url>/2018/04/28/Linux-Mint-18-%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/</url>
+    <content><![CDATA[<p>最近在使用Linux Mint 18作为开发环境，正好搜狗输入法也支持linux系统，所以本文记录安装过程<br>   因为Linux Mint 18 是基于Ubuntu 16，所以本文也适用于Ubuntu 16及以上系统</p>
+<h2 id="安装Fcitx输入法"><a href="#安装Fcitx输入法" class="headerlink" title="安装Fcitx输入法"></a>安装Fcitx输入法</h2><p>   <em>因为搜狗输入法是基于Fctix输入法，所以需要先安装Fctix</em></p>
+<ul>
+<li><p>打开System Settings<br>   <img src="/SystemSettings.png" alt="System Settings.png"></p>
+</li>
+<li><p>进入Input Method，点击Fctix后面的Add support for Fctix，安装完成后如下图所示<br>   <img src="/LanguageSettings.png" alt="Language Settings.png"></p>
+</li>
+</ul>
+<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><ul>
+<li><p>下载：<a href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法 for linux</a></p>
+</li>
+<li><p>打开进入安装界面，点击Install。安装完成后如下图所示：<br>   <img src="/Install.png" alt="Install"></p>
+</li>
+<li><p>安装完成后重启电脑</p>
+</li>
+</ul>
+<h2 id="选择搜狗输入法"><a href="#选择搜狗输入法" class="headerlink" title="选择搜狗输入法"></a>选择搜狗输入法</h2><ul>
+<li><p>打开Fctix configuration<br>   <img src="/Selection_002.png" alt="Selection_002.png"></p>
+</li>
+<li><p>点击下方添加按钮<br>   <img src="/Selection_003.png" alt="Selection_003.png"></p>
+</li>
+<li><p>找到搜狗拼音并添加到输入法，安装完成<br>   <img src="/Selection_004.png" alt="Selection_004.png"></p>
+</li>
+</ul>
+<h2 id="安装完成后可以使用默认的快捷键ctrl-space切换输入法。"><a href="#安装完成后可以使用默认的快捷键ctrl-space切换输入法。" class="headerlink" title="安装完成后可以使用默认的快捷键ctrl+space切换输入法。"></a>安装完成后可以使用默认的快捷键ctrl+space切换输入法。</h2><h2 id="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"><a href="#安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。" class="headerlink" title="安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。"></a>安装使用时偶尔会出现不显示候选词框，而只显示一个边框的问题。出现这个问题只需要切换一下搜狗拼音的皮肤即可解决。</h2>]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>Linux 中文输入法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>S1D1|leetcode704|Binary Search</title>
     <url>/2022/06/23/S1D1-leetcode704-Binary-Search/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/binary-search">leetcode 704. Binary Search</a></p>
@@ -120,23 +120,6 @@
 </li>
 <li><p>二分查找-左闭右开版【O(log n)】</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func search(nums []int, target int) int &#123;</span><br><span class="line">    right := len(nums)</span><br><span class="line">    left := 0</span><br><span class="line">    for left &lt; right &#123;</span><br><span class="line">        mid := left + (right-left)/2</span><br><span class="line">        if nums[mid] == target &#123;</span><br><span class="line">            return mid</span><br><span class="line">        &#125; else if nums[mid] &gt; target &#123;</span><br><span class="line">            right = mid</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            left = mid+1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>S1D3|leetcode977|Squares of a Sorted Array</title>
-    <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
-    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
-<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -169,16 +152,20 @@
       </tags>
   </entry>
   <entry>
-    <title>【macOS M1】Java环境安装</title>
-    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+    <title>S1D3|leetcode977|Squares of a Sorted Array</title>
+    <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
       <categories>
-        <category>开发环境</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>macOS</tag>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -197,6 +184,36 @@
       </categories>
       <tags>
         <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D4|leetcode209|Minimum Size Subarray Sum</title>
+    <url>/2022/06/28/S1D4-leetcode209-Minimum-Size-Subarray-Sum/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/minimum-size-subarray-sum/">leetcode 209. Minimum Size Subarray Sum</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个非负整数数组，给一个非负整数，找出大于等于非负整数的最小数组片段。<br>暴力解法是两次循环，第一层选定开始元素，第二层循环从开始元素之后的一个，不断累加，看有没有符合条件的片段，此方法时间复杂度O(n^2)<br>使用双指针方法，可以O(n)解决。具体思路是定义两个指针，第一个指针指向当前片段的结束元素。虽然和暴力解法思路差不多，都是找到一个开始元素，然后去判断后续的片段，但不一样的在于当片段符合条件之后，不会重置第一个指针的下表，而是直接向后移动一个，第二个指针也是从上一次结束的位置开始判断。这样虽然是两重循环嵌套，但是每个元素操作次数是两次，也就是2*n，时间复杂度O(n)。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>双指针解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func minSubArrayLen(target int, nums []int) int &#123;</span><br><span class="line">    i := 0</span><br><span class="line">    l := len(nums)  </span><br><span class="line">    sum := 0        </span><br><span class="line">    result := l + 1 </span><br><span class="line">    for j := 0; j &lt; l; j++ &#123;</span><br><span class="line">        sum += nums[j]</span><br><span class="line">        for sum &gt;= target &#123;</span><br><span class="line">            subLength := j - i + 1</span><br><span class="line">            if subLength &lt; result &#123;</span><br><span class="line">                result = subLength</span><br><span class="line">            &#125;</span><br><span class="line">            sum -= nums[i]</span><br><span class="line">            i++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if result == l+1 &#123;</span><br><span class="line">        return 0</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return result</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
       </tags>
   </entry>
   <entry>
