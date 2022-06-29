@@ -232,4 +232,23 @@
         <tag>macOS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>S1D5|leetcode59|Spiral Matrix II</title>
+    <url>/2022/06/29/S1D5-leetcode59-Spiral-Matrix-II/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/spiral-matrix-ii">leetcode 59. Spiral Matrix II</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个正整数n，将1 ~ n^2顺时针放置在一个二维数组中，如图所示:</p>
+<img src="/2022/06/29/S1D5-leetcode59-Spiral-Matrix-II/spiraln.jpg" class="" title="spiraln">
+<p>按照正常放置逻辑进行操作，注意控制好每次循环的变量范围。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>暴力解法【≈O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func generateMatrix(n int) [][]int &#123;</span><br><span class="line">  top, bottom := 0, n-1</span><br><span class="line">  left, right := 0, n-1</span><br><span class="line">  num := 1</span><br><span class="line">  tar := n * n</span><br><span class="line">  matrix := make([][]int, n)</span><br><span class="line">  for i := 0; i &lt; n; i++ &#123;</span><br><span class="line">    matrix[i] = make([]int, n)</span><br><span class="line">  &#125;</span><br><span class="line">  for num &lt;= tar &#123;</span><br><span class="line">    for i := left; i &lt;= right; i++ &#123;</span><br><span class="line">      matrix[top][i] = num</span><br><span class="line">      num++</span><br><span class="line">    &#125;</span><br><span class="line">    top++</span><br><span class="line">    for i := top; i &lt;= bottom; i++ &#123;</span><br><span class="line">      matrix[i][right] = num</span><br><span class="line">      num++</span><br><span class="line">    &#125;</span><br><span class="line">    right--</span><br><span class="line">    for i := right; i &gt;= left; i-- &#123;</span><br><span class="line">      matrix[bottom][i] = num</span><br><span class="line">      num++</span><br><span class="line">    &#125;</span><br><span class="line">    bottom--</span><br><span class="line">    for i := bottom; i &gt;= top; i-- &#123;</span><br><span class="line">      matrix[i][left] = num</span><br><span class="line">      num++</span><br><span class="line">    &#125;</span><br><span class="line">    left++</span><br><span class="line">  &#125;</span><br><span class="line">  return matrix</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
 </search>
