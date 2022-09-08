@@ -156,24 +156,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TODO-2019</title>
-    <url>/2019/01/14/TODO-2019/</url>
-    <content><![CDATA[<ul>
-<li><input disabled="" type="checkbox"> <del>每周一篇技术博客，杂记随意。</del> 失败</li>
-<li><input checked="" disabled="" type="checkbox"> 学习一种前端技术。</li>
-<li><input checked="" disabled="" type="checkbox"> 上半年完成博客改版。</li>
-<li><input disabled="" type="checkbox"> <del>减回125斤</del> 失败</li>
-<li><input disabled="" type="checkbox"> <del>学会如何沉淀知识</del> 失败</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>S1D3|leetcode977|Squares of a Sorted Array</title>
     <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
@@ -208,31 +190,6 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工一键安装ss链接</title>
-    <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【macOS M1】Java环境安装</title>
-    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>S1D5|leetcode59|Spiral Matrix II</title>
     <url>/2022/06/29/S1D5-leetcode59-Spiral-Matrix-II/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/spiral-matrix-ii">leetcode 59. Spiral Matrix II</a></p>
@@ -249,6 +206,129 @@
       <tags>
         <tag>leetcode</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D8|leetcode206|Reverse Linked List</title>
+    <url>/2022/09/02/S1D8-leetcode206-Reverse-Linked-List/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/reverse-linked-list/">leetcode 206. Reverse Linked List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求将一个单链表进行反转操作，还是考验对链表的基础操作。<br>为了节省内存空间，所以在原链表上进行处理，将链表每个节点的指向方向转换一下即可。<br>注意转换之前要将节点的next暂存一下</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>指针解法【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode reverseList(ListNode head) &#123;</span><br><span class="line">    ListNode prev = null;</span><br><span class="line">    ListNode cur = head;</span><br><span class="line">    ListNode temp = null;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        temp = cur.next;</span><br><span class="line">        cur.next = prev;</span><br><span class="line">        prev = cur;</span><br><span class="line">        cur = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>递归解法【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode reverseList(ListNode head) &#123;</span><br><span class="line">    return reverse(null, head);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static ListNode reverse(ListNode pre, ListNode cur)&#123;</span><br><span class="line">    if(cur == null)&#123;</span><br><span class="line">        return pre;</span><br><span class="line">    &#125;</span><br><span class="line">    ListNode temp = cur.next;</span><br><span class="line">    cur.next = pre;</span><br><span class="line">    pre = cur;</span><br><span class="line">    cur = temp;</span><br><span class="line">    return reverse(pre, cur);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D9|leetcode24|Swap Nodes in Pairs</title>
+    <url>/2022/09/08/S1D9-leetcode24-Swap-Nodes-in-Pairs/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/swap-nodes-in-pairs/">leetcode 24. Swap Nodes in Pairs</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求将链表的元素进行两两交换位置，例如1234-&gt;2143。<br>也是考验链表的基础操作，使用虚拟头节点，逻辑思路很简单，但是要注意各个指针的位置。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>循环【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode swapPairs(ListNode head)&#123;</span><br><span class="line">    ListNode dammyNode = new ListNode(0);</span><br><span class="line">    dammyNode.next = head;</span><br><span class="line">    ListNode prev = dammyNode;</span><br><span class="line"></span><br><span class="line">    while(prev.next != null &amp;&amp; prev.next.next != null)&#123;</span><br><span class="line">        ListNode temp = head.next.next;</span><br><span class="line">        prev.next = head.next;</span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = temp;</span><br><span class="line">        prev = head;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dammyNode.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D6|leetcode203|Remove Linked List Elements</title>
+    <url>/2022/07/27/S1D6-leetcode203-Remove-Linked-List-Elements/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-linked-list-elements/">leetcode 203. Remove Linked List Elements</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>链表的基础操作，需要特殊考虑的是，当头节点是符合条件的数据时，需要将头节点后移。所以进阶的思路是设置一个虚拟的头节点，这样就不需要单独处理了。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>虚拟头节点【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span><br><span class="line">    ListNode dummy = new ListNode(-1, head);</span><br><span class="line">    ListNode pre = dummy;</span><br><span class="line">    ListNode cur = head;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不使用虚拟头节点【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    while (head != null &amp;&amp; head.val == val) &#123;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已经为null，提前退出</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已确定当前head.val != val</span><br><span class="line">    ListNode pre = head;</span><br><span class="line">    ListNode cur = head.next;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D7|leetcode707|Design Linked List</title>
+    <url>/2022/07/28/S1D7-leetcode707-Design-Linked-List/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/design-linked-list/">leetcode 707. Design Linked List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>手写链表的五个基础操作方法，可以更好的了解和使用链表。<br>整体：第一次写的时候在每个方法都需要单独考虑长度问题，但实际使用全局变量控制就可以。<br>get：因为使用了虚拟头节点，所以get的时候要获取index+1位置的数据。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>单链表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class MyLinkedList &#123;</span><br><span class="line"></span><br><span class="line">    int size;</span><br><span class="line">    ListNode head;</span><br><span class="line">    </span><br><span class="line">    public MyLinkedList() &#123;</span><br><span class="line">        size = 0;</span><br><span class="line">        head = new ListNode(0);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int get(int index) &#123;</span><br><span class="line">        if(index &lt;0 || index &gt; size-1)&#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index+1; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return cur.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtHead(int val) &#123;</span><br><span class="line">        addAtIndex(0, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtTail(int val) &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtIndex(int index, int val) &#123;</span><br><span class="line">        if(index &gt; size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        if(index &lt; 0)&#123;</span><br><span class="line">            index  = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode ins = new ListNode(val);</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        ins.next = cur.next;</span><br><span class="line">        cur.next = ins;</span><br><span class="line">        size ++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void deleteAtIndex(int index) &#123;</span><br><span class="line">        if (index &lt;0 || index &gt;=size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur.next = cur.next.next;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双链表（待补充）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TODO-2019</title>
+    <url>/2019/01/14/TODO-2019/</url>
+    <content><![CDATA[<ul>
+<li><input disabled="" type="checkbox"> <del>每周一篇技术博客，杂记随意。</del> 失败</li>
+<li><input checked="" disabled="" type="checkbox"> 学习一种前端技术。</li>
+<li><input checked="" disabled="" type="checkbox"> 上半年完成博客改版。</li>
+<li><input disabled="" type="checkbox"> <del>减回125斤</del> 失败</li>
+<li><input disabled="" type="checkbox"> <del>学会如何沉淀知识</del> 失败</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工一键安装ss链接</title>
+    <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
       </tags>
   </entry>
 </search>
