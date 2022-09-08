@@ -331,4 +331,21 @@
         <tag>SSR</tag>
       </tags>
   </entry>
+  <entry>
+    <title>S1D10|leetcode19|Remove Nth Node From End of List</title>
+    <url>/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">leetcode 19. Remove Nth Node From End of List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求删除链表的倒数指定节点的元素，并将删除后的链表头返回，例如123456删除倒数第2个，则返回12346。<br>本题采用双指针的方式处理，快的指针比慢的指针快n个节点，当快的指针到达链表末尾时，将慢的指针元素移除。<br>同时考虑可能会存在移除第一个节点的情况，所以采用虚拟头节点，更方便处理。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>循环【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode removeNthFromEnd (ListNode head, int n)&#123;</span><br><span class="line">    ListNode dammyNode = new ListNode(0);</span><br><span class="line">    dammyNode.next = head;</span><br><span class="line">    ListNode fast = head;</span><br><span class="line">    ListNode slow = dammyNode;</span><br><span class="line">    while(fast!=null)&#123;</span><br><span class="line">        if(n&lt;=0)&#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fast.next == null)&#123;</span><br><span class="line">            slow.next = slow.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        n--;</span><br><span class="line">        fast = fast.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dammyNode.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
 </search>

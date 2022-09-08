@@ -20,23 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.kebensun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="科本小栈">
-<meta property="og:url" content="http://www.kebensun.com/tags/%E6%95%B0%E7%BB%84/index.html">
+    <meta name="description" content="每日一题第一赛季第十天">
+<meta property="og:type" content="article">
+<meta property="og:title" content="S1D10|leetcode19|Remove Nth Node From End of List">
+<meta property="og:url" content="http://www.kebensun.com/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/index.html">
 <meta property="og:site_name" content="科本小栈">
+<meta property="og:description" content="每日一题第一赛季第十天">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-08T07:21:35.000Z">
+<meta property="article:modified_time" content="2022-09-08T07:26:17.561Z">
 <meta property="article:author" content="keben Sun">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.kebensun.com/tags/%E6%95%B0%E7%BB%84/">
+<link rel="canonical" href="http://www.kebensun.com/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/数组/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.kebensun.com/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/","path":"2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/","title":"S1D10|leetcode19|Remove Nth Node From End of List"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: 数组 | 科本小栈</title>
+<title>S1D10|leetcode19|Remove Nth Node From End of List | 科本小栈</title>
   
 
 
@@ -98,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -111,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">解题代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,131 +179,109 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">数组
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.kebensun.com/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="keben Sun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="科本小栈">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="S1D10|leetcode19|Remove Nth Node From End of List | 科本小栈">
+      <meta itemprop="description" content="每日一题第一赛季第十天">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          S1D10|leetcode19|Remove Nth Node From End of List
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-09-08 15:21:35 / 修改时间：15:26:17" itemprop="dateCreated datePublished" datetime="2022-09-08T15:21:35+08:00">2022-09-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">每日一题第一赛季第十天</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">leetcode 19. Remove Nth Node From End of List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求删除链表的倒数指定节点的元素，并将删除后的链表头返回，例如123456删除倒数第2个，则返回12346。<br>本题采用双指针的方式处理，快的指针比慢的指针快n个节点，当快的指针到达链表末尾时，将慢的指针元素移除。<br>同时考虑可能会存在移除第一个节点的情况，所以采用虚拟头节点，更方便处理。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>循环【O(n)】<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static ListNode removeNthFromEnd (ListNode head, int n)&#123;</span><br><span class="line">    ListNode dammyNode = new ListNode(0);</span><br><span class="line">    dammyNode.next = head;</span><br><span class="line">    ListNode fast = head;</span><br><span class="line">    ListNode slow = dammyNode;</span><br><span class="line">    while(fast!=null)&#123;</span><br><span class="line">        if(n&lt;=0)&#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fast.next == null)&#123;</span><br><span class="line">            slow.next = slow.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        n--;</span><br><span class="line">        fast = fast.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dammyNode.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-29T15:35:50+08:00"
-              content="2022-06-29">
-          06-29
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/29/S1D5-leetcode59-Spiral-Matrix-II/" itemprop="url">
-            <span itemprop="name">S1D5|leetcode59|Spiral Matrix II</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag"># 链表</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/09/08/S1D9-leetcode24-Swap-Nodes-in-Pairs/" rel="prev" title="S1D9|leetcode24|Swap Nodes in Pairs">
+                  <i class="fa fa-chevron-left"></i> S1D9|leetcode24|Swap Nodes in Pairs
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-28T14:40:07+08:00"
-              content="2022-06-28">
-          06-28
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/28/S1D4-leetcode209-Minimum-Size-Subarray-Sum/" itemprop="url">
-            <span itemprop="name">S1D4|leetcode209|Minimum Size Subarray Sum</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-27T15:21:33+08:00"
-              content="2022-06-27">
-          06-27
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/" itemprop="url">
-            <span itemprop="name">S1D3|leetcode977|Squares of a Sorted Array</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-24T09:46:09+08:00"
-              content="2022-06-24">
-          06-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/24/S1D2-leetcode27-Remove-Element/" itemprop="url">
-            <span itemprop="name">S1D2|leetcode27|Remove Element</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-23T14:34:46+08:00"
-              content="2022-06-23">
-          06-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/23/S1D1-leetcode704-Binary-Search/" itemprop="url">
-            <span itemprop="name">S1D1|leetcode704|Binary Search</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
-
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -337,7 +322,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"1e0efe56d2ccfb51c5432fb30593b567"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"KebenSun","repo":"KebenSun.github.io","client_id":"f71a7dcfde0bc96ffcbc","client_secret":"0e2ce525603f648a6583f02bea3b262a3345442a","admin_user":"KebenSun","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"a19cbc6f01bf77589f2a41e53db2c0d0"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
