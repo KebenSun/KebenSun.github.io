@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 链表
 date: 2022-09-02 14:08:53
-description: 每日一题第一赛季第八天
+description: 每日一题第一赛季第八题
 ---
 ## 题目信息
 [leetcode 206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)

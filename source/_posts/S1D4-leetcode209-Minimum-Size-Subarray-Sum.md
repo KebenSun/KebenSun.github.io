@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 数组
 date: 2022-06-28 14:40:07
-description: 每日一题第一赛季第四天
+description: 每日一题第一赛季第四题
 ---
 ## 题目信息
 [leetcode 209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)

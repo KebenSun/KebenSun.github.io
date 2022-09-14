@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 链表
 date: 2022-09-08 13:42:24
-description: 每日一题第一赛季第九天
+description: 每日一题第一赛季第九题
 ---
 ## 题目信息
 [leetcode 24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)

@@ -6,7 +6,7 @@ categories:
 tags: 
 - leetcode
 - 数组
-description: 每日一题第一赛季第一天
+description: 每日一题第一赛季第一题
 ---
 ## 题目信息
 [leetcode 704. Binary Search](https://leetcode.com/problems/binary-search)

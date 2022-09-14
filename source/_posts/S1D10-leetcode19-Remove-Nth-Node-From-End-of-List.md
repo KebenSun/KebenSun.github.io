@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 链表
 date: 2022-09-08 15:21:35
-description: 每日一题第一赛季第十天
+description: 每日一题第一赛季第十题
 ---
 ## 题目信息
 [leetcode 19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)

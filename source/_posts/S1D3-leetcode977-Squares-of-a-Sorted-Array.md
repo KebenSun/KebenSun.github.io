@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 数组
 date: 2022-06-27 15:21:33
-description: 每日一题第一赛季第三天
+description: 每日一题第一赛季第三题
 ---
 ## 题目信息
 [leetcode 977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)

@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 数组
 date: 2022-06-29 15:35:50
-description: 每日一题第一赛季第五天
+description: 每日一题第一赛季第五题
 ---
 ## 题目信息
 [leetcode 59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)

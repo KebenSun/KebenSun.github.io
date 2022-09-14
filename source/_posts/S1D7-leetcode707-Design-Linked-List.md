@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 链表
 date: 2022-07-28 11:44:06
-description: 每日一题第一赛季第七天
+description: 每日一题第一赛季第七题
 ---
 ## 题目信息
 [leetcode 707. Design Linked List](https://leetcode.com/problems/design-linked-list/)

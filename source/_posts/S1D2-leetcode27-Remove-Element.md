@@ -1,7 +1,7 @@
 ---
 title: S1D2|leetcode27|Remove Element
 date: 2022-06-24 09:46:09
-description: 每日一题第一赛季第二天
+description: 每日一题第一赛季第二题
 categories: 算法
 tags:
 - leetcode

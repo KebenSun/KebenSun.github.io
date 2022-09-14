@@ -5,7 +5,7 @@ tags:
   - leetcode
   - 链表
 date: 2022-07-27 15:53:43
-description: 每日一题第一赛季第六天
+description: 每日一题第一赛季第六题
 ---
 ## 题目信息
 [leetcode 203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
