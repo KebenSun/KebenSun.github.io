@@ -135,6 +135,44 @@
       </tags>
   </entry>
   <entry>
+    <title>S1D10|leetcode19|Remove Nth Node From End of List</title>
+    <url>/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">leetcode 19. Remove Nth Node From End of List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求删除链表的倒数指定节点的元素，并将删除后的链表头返回，例如123456删除倒数第2个，则返回12346。<br>本题采用双指针的方式处理，快的指针比慢的指针快n个节点，当快的指针到达链表末尾时，将慢的指针元素移除。<br>同时考虑可能会存在移除第一个节点的情况，所以采用虚拟头节点，更方便处理。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>循环【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode removeNthFromEnd (ListNode head, int n)&#123;</span><br><span class="line">    ListNode dammyNode = new ListNode(0);</span><br><span class="line">    dammyNode.next = head;</span><br><span class="line">    ListNode fast = head;</span><br><span class="line">    ListNode slow = dammyNode;</span><br><span class="line">    while(fast!=null)&#123;</span><br><span class="line">        if(n&lt;=0)&#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fast.next == null)&#123;</span><br><span class="line">            slow.next = slow.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        n--;</span><br><span class="line">        fast = fast.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dammyNode.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D11|leetcode106|Intersection of Two Linked Lists</title>
+    <url>/2022/09/14/S1D11-leetcode106-Intersection-of-Two-Linked-Lists/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/">leetcode 106. Intersection of Two Linked Lists</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给到两个链表，查找两个链表从哪个节点开始相同，注意此处相同是指引用相同，不是值相同。<br>简单的暴力解法，两层循环嵌套，找到相等的节点，就是结果。<br>因为链表的特殊性，当找到相同的一个节点时，他的后续节点也必然相同，所以相同的节点，总是位于链表的倒数相同的位置。所以利用此特性，可以先将较长一个的链表，提前移动至与较短链表相同长度的节点，然后同时开始遍历里两个链表，查找是否有相同的节点。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>暴力解法【O(m*n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode getIntersectionNode1(ListNode headA, ListNode headB) &#123;</span><br><span class="line">    ListNode nodeA = headA;</span><br><span class="line">    while(nodeA != null)&#123;</span><br><span class="line">        ListNode nodeB = headB;</span><br><span class="line">        while(nodeB != null)&#123;</span><br><span class="line">            if(nodeA == nodeB)&#123;</span><br><span class="line">                return nodeA;</span><br><span class="line">            &#125;</span><br><span class="line">            nodeB = nodeB.next;</span><br><span class="line">        &#125;</span><br><span class="line">        nodeA = nodeA.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return new ListNode();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对齐后查找【O(m+n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode getIntersectionNode2(ListNode headA, ListNode headB)&#123;</span><br><span class="line">    ListNode curA = headA;</span><br><span class="line">    ListNode curB = headB;</span><br><span class="line">    int lenA = 0, lenB = 0;</span><br><span class="line"></span><br><span class="line">    while(curA != null)&#123;</span><br><span class="line">        lenA++;</span><br><span class="line">        curA = curA.next;</span><br><span class="line">    &#125;</span><br><span class="line">    curA = headA;</span><br><span class="line">    while(curB != null)&#123;</span><br><span class="line">        lenB++;</span><br><span class="line">        curB = curB.next;</span><br><span class="line">    &#125;</span><br><span class="line">    curB = headB;</span><br><span class="line">    if(lenA &lt; lenB)&#123;</span><br><span class="line">        int tempLen = lenA;</span><br><span class="line">        lenA = lenB;</span><br><span class="line">        lenB = tempLen;</span><br><span class="line">        ListNode tempCur = curA;</span><br><span class="line">        curA = curB;</span><br><span class="line">        curB = tempCur;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int gap = lenA = lenB;</span><br><span class="line">    while(gap-- &gt; 0)&#123;</span><br><span class="line">        curA = curA.next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    while(curA != null)&#123;</span><br><span class="line">        if(curA == curB)&#123;</span><br><span class="line">            return curA;</span><br><span class="line">        &#125;</span><br><span class="line">        curA = curA.next;</span><br><span class="line">        curB = curB.next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>S1D2|leetcode27|Remove Element</title>
     <url>/2022/06/24/S1D2-leetcode27-Remove-Element/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-element">leetcode 27. Remove Element</a></p>
@@ -145,23 +183,6 @@
 </li>
 <li><p>双指针法【O(n)】</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func removeElement(nums []int, val int) int &#123;</span><br><span class="line">	res := 0</span><br><span class="line">	for i := 0; i &lt; len(nums); i++ &#123;</span><br><span class="line">		if nums[i] != val &#123;</span><br><span class="line">			nums[res] = nums[i]</span><br><span class="line">			res++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>S1D3|leetcode977|Squares of a Sorted Array</title>
-    <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
-    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
-<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -190,6 +211,23 @@
       </tags>
   </entry>
   <entry>
+    <title>S1D3|leetcode977|Squares of a Sorted Array</title>
+    <url>/2022/06/27/S1D3-leetcode977-Squares-of-a-Sorted-Array/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">leetcode 977. Squares of a Sorted Array</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>给一个数组，非降序排序。要求将数组每个元素平方之后排序，返回排序后的数组。<br>暴力解法是先将数据循环平方，然后再对数据进行排序。<br>但是题目也有补充，对每个元素进行平方并对新数组进行排序非常简单，能否找到使用不同方法的 O(n) 解决方案。<br>参考网上解题思路，直接对数组的平方排序，然后放入新的数组。因为非降序数组平方之后，元素有可能是递增的，也有可能是两边大，中间小。所以排序方式采用两边向中间的比较方式。因为是从大到小筛选，所以放置到新的数组时，是倒叙放置。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li>解法【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func squaresAndSort(nums []int) []int &#123;</span><br><span class="line">  length := len(nums)</span><br><span class="line">  res := make([]int, length)</span><br><span class="line">  k := length - 1</span><br><span class="line">  i := 0</span><br><span class="line">  j := length - 1</span><br><span class="line"></span><br><span class="line">  for i &lt;= j &#123;</span><br><span class="line">    lm := nums[i] * nums[i]</span><br><span class="line">    rm := nums[j] * nums[j]</span><br><span class="line">    if lm &lt;= rm &#123;</span><br><span class="line">      res[k] = rm</span><br><span class="line">      j--</span><br><span class="line">    &#125; else if lm &gt; rm &#123;</span><br><span class="line">      res[k] = lm</span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    k--</span><br><span class="line">  &#125;</span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>S1D5|leetcode59|Spiral Matrix II</title>
     <url>/2022/06/29/S1D5-leetcode59-Spiral-Matrix-II/</url>
     <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/spiral-matrix-ii">leetcode 59. Spiral Matrix II</a></p>
@@ -206,6 +244,48 @@
       <tags>
         <tag>leetcode</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D7|leetcode707|Design Linked List</title>
+    <url>/2022/07/28/S1D7-leetcode707-Design-Linked-List/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/design-linked-list/">leetcode 707. Design Linked List</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>手写链表的五个基础操作方法，可以更好的了解和使用链表。<br>整体：第一次写的时候在每个方法都需要单独考虑长度问题，但实际使用全局变量控制就可以。<br>get：因为使用了虚拟头节点，所以get的时候要获取index+1位置的数据。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>单链表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class MyLinkedList &#123;</span><br><span class="line"></span><br><span class="line">    int size;</span><br><span class="line">    ListNode head;</span><br><span class="line">    </span><br><span class="line">    public MyLinkedList() &#123;</span><br><span class="line">        size = 0;</span><br><span class="line">        head = new ListNode(0);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int get(int index) &#123;</span><br><span class="line">        if(index &lt;0 || index &gt; size-1)&#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index+1; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return cur.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtHead(int val) &#123;</span><br><span class="line">        addAtIndex(0, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtTail(int val) &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtIndex(int index, int val) &#123;</span><br><span class="line">        if(index &gt; size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        if(index &lt; 0)&#123;</span><br><span class="line">            index  = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode ins = new ListNode(val);</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        ins.next = cur.next;</span><br><span class="line">        cur.next = ins;</span><br><span class="line">        size ++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void deleteAtIndex(int index) &#123;</span><br><span class="line">        if (index &lt;0 || index &gt;=size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur.next = cur.next.next;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双链表（待补充）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>S1D6|leetcode203|Remove Linked List Elements</title>
+    <url>/2022/07/27/S1D6-leetcode203-Remove-Linked-List-Elements/</url>
+    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-linked-list-elements/">leetcode 203. Remove Linked List Elements</a></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>链表的基础操作，需要特殊考虑的是，当头节点是符合条件的数据时，需要将头节点后移。所以进阶的思路是设置一个虚拟的头节点，这样就不需要单独处理了。</p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
+<li><p>虚拟头节点【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span><br><span class="line">    ListNode dummy = new ListNode(-1, head);</span><br><span class="line">    ListNode pre = dummy;</span><br><span class="line">    ListNode cur = head;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不使用虚拟头节点【O(n)】</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    while (head != null &amp;&amp; head.val == val) &#123;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已经为null，提前退出</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已确定当前head.val != val</span><br><span class="line">    ListNode pre = head;</span><br><span class="line">    ListNode cur = head.next;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -247,61 +327,6 @@
       </tags>
   </entry>
   <entry>
-    <title>S1D6|leetcode203|Remove Linked List Elements</title>
-    <url>/2022/07/27/S1D6-leetcode203-Remove-Linked-List-Elements/</url>
-    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-linked-list-elements/">leetcode 203. Remove Linked List Elements</a></p>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>链表的基础操作，需要特殊考虑的是，当头节点是符合条件的数据时，需要将头节点后移。所以进阶的思路是设置一个虚拟的头节点，这样就不需要单独处理了。</p>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
-<li><p>虚拟头节点【O(n)】</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span><br><span class="line">    ListNode dummy = new ListNode(-1, head);</span><br><span class="line">    ListNode pre = dummy;</span><br><span class="line">    ListNode cur = head;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不使用虚拟头节点【O(n)】</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    while (head != null &amp;&amp; head.val == val) &#123;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已经为null，提前退出</span><br><span class="line">    if (head == null) &#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    // 已确定当前head.val != val</span><br><span class="line">    ListNode pre = head;</span><br><span class="line">    ListNode cur = head.next;</span><br><span class="line">    while (cur != null) &#123;</span><br><span class="line">        if (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>S1D7|leetcode707|Design Linked List</title>
-    <url>/2022/07/28/S1D7-leetcode707-Design-Linked-List/</url>
-    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/design-linked-list/">leetcode 707. Design Linked List</a></p>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>手写链表的五个基础操作方法，可以更好的了解和使用链表。<br>整体：第一次写的时候在每个方法都需要单独考虑长度问题，但实际使用全局变量控制就可以。<br>get：因为使用了虚拟头节点，所以get的时候要获取index+1位置的数据。</p>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
-<li><p>单链表</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class MyLinkedList &#123;</span><br><span class="line"></span><br><span class="line">    int size;</span><br><span class="line">    ListNode head;</span><br><span class="line">    </span><br><span class="line">    public MyLinkedList() &#123;</span><br><span class="line">        size = 0;</span><br><span class="line">        head = new ListNode(0);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int get(int index) &#123;</span><br><span class="line">        if(index &lt;0 || index &gt; size-1)&#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index+1; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return cur.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtHead(int val) &#123;</span><br><span class="line">        addAtIndex(0, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtTail(int val) &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtIndex(int index, int val) &#123;</span><br><span class="line">        if(index &gt; size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        if(index &lt; 0)&#123;</span><br><span class="line">            index  = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode ins = new ListNode(val);</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        ins.next = cur.next;</span><br><span class="line">        cur.next = ins;</span><br><span class="line">        size ++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void deleteAtIndex(int index) &#123;</span><br><span class="line">        if (index &lt;0 || index &gt;=size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        for (int i = 0; i &lt; index; i++) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur.next = cur.next.next;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>双链表（待补充）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【macOS M1】Java环境安装</title>
-    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
-]]></content>
-      <categories>
-        <category>开发环境</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>TODO-2019</title>
     <url>/2019/01/14/TODO-2019/</url>
     <content><![CDATA[<ul>
@@ -320,6 +345,19 @@
       </tags>
   </entry>
   <entry>
+    <title>【macOS M1】Java环境安装</title>
+    <url>/2021/11/24/%E3%80%90macOS%E3%80%91Java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="发行版本选择"><a href="#发行版本选择" class="headerlink" title="发行版本选择"></a>发行版本选择</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>通过<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载链接</a> 下载dmg包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过dmg包安装</p>
+]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搬瓦工一键安装ss链接</title>
     <url>/2018/07/05/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85ss%E9%93%BE%E6%8E%A5/</url>
     <content><![CDATA[<p>搬瓦工改版后，没有一键安装shadowsocks模块的按钮了。但是功能还在，登录后进入下面这个网址即可安装。<br><a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
@@ -329,23 +367,6 @@
       </categories>
       <tags>
         <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>S1D10|leetcode19|Remove Nth Node From End of List</title>
-    <url>/2022/09/08/S1D10-leetcode19-Remove-Nth-Node-From-End-of-List/</url>
-    <content><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">leetcode 19. Remove Nth Node From End of List</a></p>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目要求删除链表的倒数指定节点的元素，并将删除后的链表头返回，例如123456删除倒数第2个，则返回12346。<br>本题采用双指针的方式处理，快的指针比慢的指针快n个节点，当快的指针到达链表末尾时，将慢的指针元素移除。<br>同时考虑可能会存在移除第一个节点的情况，所以采用虚拟头节点，更方便处理。</p>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><ol>
-<li>循环【O(n)】<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static ListNode removeNthFromEnd (ListNode head, int n)&#123;</span><br><span class="line">    ListNode dammyNode = new ListNode(0);</span><br><span class="line">    dammyNode.next = head;</span><br><span class="line">    ListNode fast = head;</span><br><span class="line">    ListNode slow = dammyNode;</span><br><span class="line">    while(fast!=null)&#123;</span><br><span class="line">        if(n&lt;=0)&#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fast.next == null)&#123;</span><br><span class="line">            slow.next = slow.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        n--;</span><br><span class="line">        fast = fast.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return dammyNode.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>链表</tag>
       </tags>
   </entry>
 </search>
